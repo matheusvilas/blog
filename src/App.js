@@ -1,10 +1,13 @@
-import React from 'react';
-import './App.scss';
-
+import React from 'react'
+import './App.scss'
+import RouteComponent from './routes'
+import { BrowserRouter } from 'react-router-dom'
 function App() {
   return (
-    <p>oi</p>
-  );
+    <BrowserRouter>
+      <RouteComponent />
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
