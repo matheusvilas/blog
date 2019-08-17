@@ -12,7 +12,6 @@ export default function Post({ match }) {
   return (
     <Fragment>
       <Header />
-
       <p>post</p>
       <Link to="/">Home</Link>
     </Fragment>

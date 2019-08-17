@@ -1,7 +1,7 @@
 import axios from 'axios'
 
-export const getPost = () => {
-  return axios.get(`https://www.reddit.com/r/feet.json`).then(res => {
-    return res
+export const getPost = url => {
+  return axios.get(`http://reddit.com/r/manga.json`).then(respose => {
+    return respose
   })
 }
