@@ -22,7 +22,7 @@ export function Post() {
       </Link>
       <Texts>
         <Subtitle>
-          A verdade sobre aquilo que deve se dizer a verdade sempre
+          A Super verdade sobre aquilo que deve se dizer a verdade sempre
         </Subtitle>
         <Data>17/08/2019</Data>
       </Texts>
