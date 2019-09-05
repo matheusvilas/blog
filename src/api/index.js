@@ -1,7 +1,14 @@
 import axios from 'axios'
 
-export const getPost = url => {
-  return axios.get(`http://reddit.com/r/manga.json`).then(respose => {
+const url = `http://localhost/wp-json/wp/v2`
+export const getPost = id => {
+  return axios.get(`${url}/posts/?filter[p]=${id}`).then(respose => {
+    return respose
+  })
+}
+
+export const getPosts = () => {
+  return axios.get(`${url}/posts`).then(respose => {
     return respose
   })
 }

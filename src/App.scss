@@ -24,6 +24,7 @@
   box-sizing: border-box
 }
 
+
 // COLORS
 $affair: #72528d;
 $purpleMountainMajesty: #a37ab6;
@@ -33,3 +34,7 @@ $anakiwa: #8be9fd;
 $koromiko: #ffb86c;
 $screaminGreen: #50fa7b;
 $cinnabar: #e7503b;
+
+body {
+  background-color: $oxfordBlue;
+}

@@ -1,30 +1,29 @@
 import React from 'react'
-import { Main, Article, Subtitle, Image, Data, Texts } from './style'
+import { Main, Container, Article, Subtitle, Image, Data, Texts } from './style'
 import { Link } from 'react-router-dom'
+import { convertDate } from '../../utils'
 
-export default function ListPosts() {
+export default function ListPosts({ posts }) {
   return (
     <Main>
-      <Post />
-      <Post />
-      <Post />
+      <Container>
+        {posts.data.map(post => (
+          <Post key={post.id} post={post} />
+        ))}
+      </Container>
     </Main>
   )
 }
 
-export function Post() {
+export function Post({ post }) {
   return (
     <Article>
-      <Link>
-        <Image
-          src={`https://images.unsplash.com/photo-1555513128-e3ed38549214?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1403&q=80`}
-        />
+      <Link to={`post/${post.id}`} params={{ id: post.id }}>
+        <Image src={post.fimg_url} />
       </Link>
       <Texts>
-        <Subtitle>
-          A Super verdade sobre aquilo que deve se dizer a verdade sempre
-        </Subtitle>
-        <Data>17/08/2019</Data>
+        <Subtitle>{post.title.rendered}</Subtitle>
+        <Data>{convertDate(post.date)}</Data>
       </Texts>
     </Article>
   )
